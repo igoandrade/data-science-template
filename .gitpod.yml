@@ -1,6 +1,9 @@
 
 tasks:
-  - init: pip3 install -r requirements.txt
+  - init: |
+      python -m venv venv
+      source ./venv/bin/activate
+      pip3 install -r requirements.txt
 
 vscode:
   extensions:
