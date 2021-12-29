@@ -1,3 +1,4 @@
+pip
 numpy
 scipy
 sympy
@@ -8,3 +9,4 @@ plotly
 yfinance
 statsmodels
 scikit-learn
+graphviz
