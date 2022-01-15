@@ -1,4 +1,3 @@
-pip
 numpy
 scipy
 sympy
@@ -10,4 +9,5 @@ yfinance
 statsmodels
 scikit-learn
 graphviz
+ipykernel
 jupyterlab
