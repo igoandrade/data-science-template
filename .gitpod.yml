@@ -1,11 +1,6 @@
 image:
   file: .gitpod.Dockerfile
 
-tasks:
-  - init: |
-      python -m venv venv
-      source ./venv/bin/activate
-      pip3 install -r requirements.txt
 vscode:
   extensions:
     - ms-toolsai.jupyter
@@ -16,7 +11,4 @@ vscode:
     - ritwickdey.liveserver
     - james-yu.latex-workshop
     - dracula-theme.theme-dracula
-
-ports:
-  - port: 3000
-    onOpen: open-preview
+    - enkia.tokyo-night
