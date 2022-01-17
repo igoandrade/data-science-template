@@ -5,7 +5,7 @@
 
 A Data Science example running in Gitpod.
 
-This repository contains the main python and r libraries for data science and financial data analysis.
+This repository contains the main [Python](https://www.python.org/) and [R](https://www.r-project.org/) libraries for data science and financial data analysis.
 
 ## Try it!
 
