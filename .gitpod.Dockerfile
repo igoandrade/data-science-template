@@ -1,10 +1,17 @@
 FROM gitpod/workspace-full:latest
 
-# Install R
 USER root
-RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive-full r-base r-base-dev
-RUN pip3 install -U radian
+RUN apt-get update
+
+# Install python environment
+RUN python -m pip install --upgrade pip
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+# Install R
+RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive tcl r-base r-base-dev
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
+RUN Rscript -e "install.packages('languageserver')"
 RUN Rscript -e "install.packages('caret')"
 RUN Rscript -e "install.packages('ggplot2')"
 RUN Rscript -e "install.packages('reshape2')"
