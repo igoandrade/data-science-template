@@ -11,10 +11,9 @@ scikit-learn
 graphviz
 ipykernel
 jupyterlab
-radian
-rpy2
 nltk
 textblob
 urllib3
 beautifulsoup4
 requests
+pygooglenews
