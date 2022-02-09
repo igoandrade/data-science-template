@@ -1,15 +1,14 @@
 FROM gitpod/workspace-full:latest
 
-USER root
-RUN apt-get update
-
 # Install python packages
 RUN python -m pip install --upgrade pip
-COPY requirements.txt ./
+COPY requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
+USER root
+
 # Install R
-RUN apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc texlive texlive-latex-extra tcl r-base r-base-dev
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
 RUN Rscript -e "install.packages('languageserver')"
 RUN Rscript -e "install.packages('caret')"
@@ -34,3 +33,6 @@ RUN Rscript -e "install.packages('scales')"
 RUN Rscript -e "install.packages('timetk')"
 RUN Rscript -e "install.packages('tibbletime')"
 RUN Rscript -e "install.packages('PerformanceAnalytics')"
+RUN Rscript -e "install.packages('moments')"
+
+RUN pip install rpy2 radian
