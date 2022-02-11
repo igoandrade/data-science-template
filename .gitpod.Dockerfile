@@ -1,3 +1,5 @@
+FROM gitpod/workspace-full:latest
+
 USER root
 
 # Install R
