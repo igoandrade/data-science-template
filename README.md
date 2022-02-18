@@ -11,4 +11,4 @@ This repository contains the main [Python](https://www.python.org/) and [R](http
 
 Try it in the browser!
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/igoandrade/ds-template)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/igoandrade/data-science-template)
